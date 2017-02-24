@@ -1,0 +1,560 @@
+/*!
+ * Ben Gaines - Freelance Web Developer (http://bengaines.me/)
+ */
+
+/* ----- Global Styles ----- */
+
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+h2 {
+  color: #20A294;
+}
+
+.text-vertical-center {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.text-vertical-center h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 4.5em;
+    font-weight: 700;
+}
+
+/* ----- Custom Button Styles ----- */
+
+.btn-dark {
+    border-radius: 0;
+    color: #fff;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.btn-dark:hover,
+.btn-dark:focus,
+.btn-dark:active {
+    color: #fff;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.btn-light {
+    border-radius: 0;
+    color: #333;
+    background-color: rgb(255,255,255);
+}
+
+.btn-light:hover,
+.btn-light:focus,
+.btn-light:active {
+    color: #333;
+    background-color: rgba(255,255,255,0.8);
+}
+
+/* ----- Custom Horizontal Rule ----- */
+
+hr.small {
+    max-width: 100px;
+}
+
+/* ----- Large Screen Navigation ----- */
+
+#large-screen-nav {
+  display: none;
+}
+
+@media(min-width:768px) {
+  #large-screen-nav {
+    display: inline;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 20px;
+    left: 10%;
+    width: 90%;
+    z-index: 1;
+  }
+
+  #large-screen-nav > li {
+    display: inline-block;
+  }
+
+  #large-screen-nav > li > a {
+    color: #fff;
+    font-size: 2.5rem;
+    padding: 10px;
+  }
+
+  #large-screen-nav > li > a:hover {
+    color: #FFE57F;
+    text-decoration: none;
+  }
+}
+
+/* ----- Side Menu ----- */
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    transform: translateX(250px);
+    overflow-y: auto;
+    background: #F57C00;
+    -webkit-transition: all 0.4s ease 0s;
+    -moz-transition: all 0.4s ease 0s;
+    -ms-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+}
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #FFF;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: #BF5100;
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 55px;
+    font-size: 18px;
+    line-height: 55px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: #999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+#menu-toggle {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+#sidebar-wrapper.active {
+    right: 250px;
+    width: 250px;
+    -webkit-transition: all 0.4s ease 0s;
+    -moz-transition: all 0.4s ease 0s;
+    -ms-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+}
+
+.toggle {
+    margin: 5px 5px 0 0;
+}
+
+img.logo {
+  width: 20%;
+  height: auto;
+}
+
+@media (min-width: 400px) {
+  img.logo {
+    width: 20%;
+    height: auto;
+  }
+}
+
+@media (min-width: 600px) {
+  img.logo {
+    width: 20%;
+    height: auto;
+  }
+}
+
+
+
+.nav-down {
+  padding-top: 20px;
+}
+
+/*  ----- Header ----- */
+
+.header {
+    display: table;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(../img/yak-bg.jpg) no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    color: white;
+}
+
+#home-logo {
+  position: absolute;
+  z-index: 3;
+  left: 10px;
+  top: 10px;
+  width: 60px;
+  height: auto;
+}
+
+/*@media (min-width: 400px) {
+  #home-logo {
+    width: 10%;
+    height: auto;
+  }
+}
+
+@media (min-width: 600px) {
+  #home-logo {
+    width: 7.5%;
+    height: auto;
+  }
+}
+
+@media (min-width: 600px) {
+  #home-logo {
+    width: 7.5%;
+    height: auto;
+  }
+}
+
+@media (min-width: 740px) {
+  #home-logo {
+    width: 6%;
+    height: auto;
+  }
+}
+
+@media (min-width: 1000px) {
+  #home-logo {
+    width: 4%;
+    height: auto;
+  }
+}*/
+
+/* phone number at top center of header on mobile */
+.header-phone {
+  position: absolute;
+  height: 45px;
+  width: 143.43px;
+  top: 35px;
+  left: 50%;
+  z-index: 1;
+  margin-top: -22.5px;
+  margin-left: -71.715px;
+}
+
+/* shift phone # to the right  on screens >= 768px */
+@media(min-width: 768px) {
+  .header-phone {
+    top: 49.5px;
+    left: 85%;
+  }
+}
+
+/* style header phone icon and number */
+.header-phone i, .header-phone a {
+  color: #fff;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.header-phone a:hover {
+  color: #FFD180;
+  text-decoration: none;
+}
+
+.nobr {
+  white-space: nowrap;
+}
+
+header .text-vertical-center h1 {
+  color: #fff;
+  font-size: 4.5rem;
+  letter-spacing: 1px;
+}
+
+@media (min-width: 700px) {
+  header .text-vertical-center h1 {
+    font-size: 5rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  header .text-vertical-center h1 {
+    font-size: 6rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  header .text-vertical-center h1 {
+    font-size: 8rem;
+  }
+}
+
+header p.lead {
+  padding: 5px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+@media (min-width: 500px) {
+  header p.lead {
+    font-size: 18px;
+    word-spacing: 2px;
+  }
+}
+
+@media (min-width: 500px) {
+  header p.lead {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 750px) {
+  header p.lead {
+    font-size: 22.5px;
+  }
+}
+
+@media (min-width: 1000px) {
+  header p.lead {
+    font-size: 25px;
+  }
+}
+
+.header-p-break {
+  display: none;
+}
+
+@media (min-width: 368px) {
+  .header-p-break {
+    display: inline;
+  }
+}
+
+
+
+
+#btn-header {
+  background-color: #F57C00;
+  color: #fff;
+}
+
+#btn-header:hover {
+  background-color: #FF9800;
+}
+
+/* ----- About ----- */
+
+.about {
+  padding: 50px 0;
+  background-color: #4DB6AC;
+  color: white;
+}
+
+.about h2 {
+  color: white;
+}
+
+.about img {
+  background-color: #4DB6AC;
+  width: 70%;
+  margin: auto;
+}
+
+@media(min-width:400px) {
+  .about img {
+    width: 80%;
+  }
+}
+
+@media(min-width:600px) {
+  .about img {
+    width: 70%;
+  }
+}
+
+.about p {
+  font-size: 16px;
+  padding-top: 50px;
+  line-height: 150%;
+  letter-spacing: 1px;
+}
+
+@media(min-width:600px) {
+  .about p {
+    font-size: 20px;
+  }
+}
+
+.about-contact-link {
+  color: #FFE57F;
+}
+
+.about-contact-link:hover {
+  color: #FFD740;
+  text-decoration: none;
+}
+
+/* ----- Portfolio ----- */
+
+.portfolio {
+  padding: 50px 0;
+  background-color: #E0F2F1;
+}
+
+.portfolio-item {
+  margin-bottom: 30px;
+}
+
+.img-portfolio {
+  margin: 0 auto;
+}
+
+.img-portfolio:hover {
+  opacity: 0.8;
+}
+
+/* ----- Services ----- */
+
+.services {
+  padding: 50px 0;
+  color: #fff;
+  background-color: #00776A;
+}
+
+.service-item {
+    margin-bottom: 30px;
+}
+
+.services h2 {
+  color: #fff;
+}
+
+.text-primary {
+    color: #00776A;
+}
+
+/* ----- Footer ----- */
+
+footer {
+    padding: 100px 0;
+}
+
+footer h4 {
+    color: #004D40;
+}
+
+footer p {
+    color: #004D40;
+}
+
+footer li > i, footer li > a {
+    color: #FF8A33;
+}
+
+footer a:hover {
+  color: #FF6F00;
+  text-decoration: none;
+}
+
+#to-top {
+  display: none;
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+}
+
+/*-----
+  -----
+        services.html
+  -----
+  -----
+*/
+img.logo-services {
+  height: 60px;
+  width: auto;
+}
+
+.services-header {
+  background-color: #009688;
+}
+
+.services-header h1 {
+  color: #fff;
+  position: relative;
+  top: 70px;
+  left: -19.5px;
+}
+
+/* ---- styling paragraphs ---- */
+
+.sections-page h4 {
+  line-height: 150%;
+  letter-spacing: 1px;
+}
+
+/* ---- build-websites section ---- */
+
+.build-websites {
+  background-color: #4DB6AC;
+}
+
+.build-websites h2 {
+  padding-top: 75px;
+  color: #FFF;
+}
+
+h2 span.white-underline {
+  border-bottom: 1px solid #FFF;
+  color: #FFF;
+}
+
+
+.build-websites h4 {
+  color: #FFF;
+}
+
+h2 span.teal-underline {
+  border-bottom: 1px solid #20A294;
+}
