@@ -274,13 +274,13 @@ img.logo {
 /* phone number at top center of header on mobile */
 .header-phone {
   position: absolute;
-  height: 45px;
-  width: 143.43px;
+  height: 25px;
+  width: 118.17px;
   top: 35px;
   left: 50%;
   z-index: 1;
   margin-top: -22.5px;
-  margin-left: -71.715px;
+  margin-left: -59.085px;
 }
 
 /* shift phone # to the right  on screens >= 768px */
@@ -313,21 +313,43 @@ header .text-vertical-center h1 {
   letter-spacing: 1px;
 }
 
-@media (min-width: 700px) {
-  header .text-vertical-center h1 {
-    font-size: 5rem;
-  }
+/* Landscape iphone 5 */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+      #header-content {
+        display: block;
+        padding-top: 100px;
+        vertical-align: baseline;
+      }
+
 }
 
-@media (min-width: 1000px) {
-  header .text-vertical-center h1 {
-    font-size: 6rem;
-  }
-}
 
-@media (min-width: 1440px) {
-  header .text-vertical-center h1 {
-    font-size: 8rem;
+/* Media queries for header h1 */
+  @media (min-width: 700px) {
+    header .text-vertical-center h1 {
+      font-size: 5rem;
+    }
+  }
+
+  @media (min-width: 1000px) {
+    header .text-vertical-center h1 {
+      font-size: 6rem;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    header .text-vertical-center h1 {
+      font-size: 8rem;
+    }
+  }
+
+@media and (orientation:landscape) {
+  header.text-vertical-center h1 {
+    top: 75%;
   }
 }
 
